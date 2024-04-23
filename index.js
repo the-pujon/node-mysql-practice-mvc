@@ -1,6 +1,6 @@
 const app = require("./app")
 
-const port = 300;
+const port = 4000;
 
 app.listen(port, ()=>{
     console.log("listening on port", port);

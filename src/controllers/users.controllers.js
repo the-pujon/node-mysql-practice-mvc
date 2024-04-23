@@ -11,8 +11,10 @@ const getAllUsers = (req, res) =>{
 }
 
 const createUser = (req, res) => {
-    const {name, email} = req.query;
+    console.log("query", req.body)
+    const {name, email} = req.body;
     const newUser = {name, email}
+    console.log("new user", newUser)
     User.createUser(newUser, (err, result)=>{
         if(err){
             res.status(500).json({error: err.message});
